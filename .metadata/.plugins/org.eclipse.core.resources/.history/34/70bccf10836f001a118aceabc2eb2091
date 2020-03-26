@@ -11,67 +11,47 @@ import java.util.Set;
 public class DuplicateCounter {
 	  
 	  ArrayList<String> wordCounter;
-	  
 	  Set<String> unique;
-	  
-	  public void count (String dataFile) {
+	  public void count (String dataFile)
+	  {
 
 		  wordCounter= new  ArrayList<String>();
 		  
+		  
 		    try {
-		    	
 		        File myObj = new File(dataFile);
-		        
 		        Scanner myReader = new Scanner(myObj);
-		        
 		        while (myReader.hasNextLine()) {
-		        	
 		          String data[] = myReader.nextLine().split(" ");
-		          
-		          for (int i=0;i<data.length;i++) {
-		        	  
+		          for (int i=0;i<data.length;i++)
+		          {
 		        	  wordCounter.add(data[i]);
-		        	  
 		          }
 		          
 		        }
-		        
 		        myReader.close();
-		      }
-		    	catch (FileNotFoundException e) {
-		    		
+		      } catch (FileNotFoundException e) {
 		        System.out.println("An error occurred.");
-		        
 		        e.printStackTrace();
-		        
 		      }
 		    
 			  unique = new HashSet<String>(wordCounter);
 
 		    }
 	  
-	  public void write (String outputFile) {
+	  public void write (String outputFile)
+	  {
 
 		    try {
-		    	
 		      FileWriter myWriter = new FileWriter(outputFile);
-		      
 			  for (String key : unique) {
-				  
 			      myWriter.write(key + ": " + Collections.frequency(wordCounter, key)+"\n");
-			      
 			  }
 		      
 		      myWriter.close();
-		      
-		    } 
-		    
-		    catch (IOException e) {
-		    	
+		    } catch (IOException e) {
 		      System.out.println("An error occurred.");
-		      
 		      e.printStackTrace();
-		      
 		    }
 		  
 	  }

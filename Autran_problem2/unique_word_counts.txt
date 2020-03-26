@@ -1,9 +1,12 @@
 love: 1
 mat: 1
 bee: 1
+read: 1
 rat: 1
 tree: 1
 flee: 1
+bleed: 1
+feed: 1
 bat: 1
 rate: 1
 light: 1
