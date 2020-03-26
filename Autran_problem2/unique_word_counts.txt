@@ -1,0 +1,16 @@
+love: 1
+mat: 1
+bee: 1
+rat: 1
+tree: 1
+flee: 1
+bat: 1
+rate: 1
+light: 1
+mate: 1
+flat: 1
+cat: 2
+hate: 2
+hat: 1
+fight: 1
+height: 1
